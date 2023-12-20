@@ -1,0 +1,144 @@
+@import '../mixin';
+@import '../vari';
+
+.order-contaniner {
+    @include flexbox-center-between();
+    background-color: white;
+    min-height: 85vh;
+    padding-bottom: 20px;
+    margin: 0;
+    align-items: start;
+}
+
+.order-history {
+    >div {
+        width: $pageSize;
+    }
+
+    &-title {
+        h1 {
+            @include styleTitleH1();
+            text-align: left !important;
+            font-family: $appleFont;
+            font-weight: 400;
+            margin: 40px 0 !important;
+
+            @include mobile() {
+                text-align: center;
+            }
+
+            @include tablet() {
+                text-align: center;
+            }
+        }
+    }
+
+    table {
+        font-family: $appleFont;
+        width: $pageSize;
+        text-align: center;
+
+        .resetIcon {
+            background-color: white;
+
+            .fa-arrow-rotate-left {
+                font-size: 18px;
+            }
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+        }
+
+        th {
+            border-bottom: 3px solid $orangeColor;
+        }
+    }
+
+    &-paging {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .btn-history-paging {
+        background-color: white;
+        color: $blackText;
+        font-size: 14px;
+        transition: all ease 0.6s;
+        margin-top: 40px;
+
+
+        .fa-angles-left,
+        .fa-angles-right {
+            font-size: 14px;
+        }
+
+        &:hover {
+            background-color: $orangeColor;
+            color: white;
+
+            .fa-angles-left,
+            .fa-angles-right {
+                color: white;
+            }
+        }
+    }
+
+    .btn-history-paging.active {
+        background-color: $orangeColor;
+        color: white;
+    }
+
+    @include mobile() {
+        >div {
+            width: 360px;
+            // overflow: hidden;
+        }
+
+        .order-history-table {
+            white-space: nowrap;
+            width: 360px;
+            overflow: scroll;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    @include tablet() {
+        >div {
+            width: 90%;
+            // overflow: hidden;
+        }
+
+        .order-history-table {
+            white-space: nowrap;
+            width: 99.3%;
+            overflow: scroll;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    }
+}
+
+.order-history-table::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+}
+
+.order-history-table::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.order-history-table::-webkit-scrollbar-thumb {
+    background-color: $greenCokor;
+}

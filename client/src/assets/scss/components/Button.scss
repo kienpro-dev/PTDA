@@ -1,0 +1,16 @@
+@import '../vari';
+
+button {
+    padding: $pad12-16;
+    background-color: $orangeColor;
+    border: none;
+    border-radius: 5px;
+    color: $whiteText;
+    font-family: $robotoFont;
+    font-size: $text-16;
+    cursor: pointer;
+}
+
+.pad0 {
+    padding: 0;
+}

@@ -1,0 +1,175 @@
+@import '../mixin';
+@import '../vari';
+
+.card {
+
+    // width: 21%;
+    // width: 100%;
+    min-height: 486px;
+    overflow: hidden;
+    border: 1px solid $colorE5E5E5;
+    border-radius: 30px !important;
+    padding: 10px;
+    background: #fff;
+    font-family: $gilroyFont;
+    transition: all ease .35s;
+    padding-bottom: 24px;
+    max-width: 280px;
+    margin: 40px 0 0;
+}
+
+.card {
+    position: relative;
+
+    .box {
+
+        background-color: $greenCokor;
+        // border-radius: 50%;
+        @include absBox(10px, null, null, 0);
+        color: #fff;
+        padding: 8px 10px 10px;
+        z-index: 5;
+        font-family: $appleFont;
+    }
+
+    .imgProduct {
+        position: relative;
+
+        >div {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            margin: 0 auto;
+            transition: all ease 4s;
+            overflow: hidden;
+            padding-top: 24%;
+
+            img {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                object-fit: cover;
+                position: relative;
+                z-index: 50;
+                // @include absBox(24%, null, null, 22%);
+                margin: 0 auto;
+                z-index: 3;
+                transition: all ease 2s;
+                display: flex;
+
+                @include mobile() {
+                    @include absBox(24%, null, null, 24%);
+                }
+
+                @include tablet() {
+                    @include absBox(24%, null, null, 21%);
+                }
+            }
+
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 50%;
+            border-radius: 20px;
+            @include absBox(null, null, 0, 0);
+            background-color: $yellowColorLight;
+            opacity: .1;
+            transition: all ease .35s;
+        }
+
+
+    }
+
+    .card-content {
+        padding: 10px;
+        margin-top: 16px;
+
+
+        span {
+            line-height: 36px;
+            font-size: $text-24;
+            color: $color1e1d23;
+            font-weight: 500;
+            overflow: hidden;
+            font-family: $appleFont;
+            display: block;
+        }
+
+
+        p {
+            color: $color808080;
+            margin: 10px 0;
+            font-family: $appleFont;
+            font-size: 14px;
+        }
+    }
+
+    .productItem {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 0;
+        justify-content: space-between;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        h3 {
+            font-size: $text-18;
+            font-weight: 600;
+            margin: 0;
+            margin-left: 8px;
+            color: $greenCokor;
+        }
+    }
+
+    .card-icon {
+        display: flex;
+
+        img {
+            margin-right: 4px;
+            width: 14px;
+        }
+    }
+
+    .orderBtn {
+        i {
+            color: #fff;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        transition: all linear 0.4s;
+        padding: 11px 8px 10px 8px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        border-radius: 16px;
+        background-color: $greenCokor;
+
+        &:hover {
+            background-color: $orangeColor;
+        }
+    }
+
+    &:hover {
+        .imgProduct::after {
+            opacity: 1;
+            height: 100%;
+        }
+
+        .imgProduct img {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.card-content-nameproduct {
+    display: flex;
+    height: 80px !important;
+    align-items: center;
+}

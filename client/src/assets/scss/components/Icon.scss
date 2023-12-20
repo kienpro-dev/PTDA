@@ -1,0 +1,12 @@
+@import '../vari';
+
+i {
+    color: $blackText;
+    font-size: $text-21;
+    cursor: pointer;
+
+    &:hover {
+        color: $orangeColor;
+        transition: linear 0.3s;
+    }
+}

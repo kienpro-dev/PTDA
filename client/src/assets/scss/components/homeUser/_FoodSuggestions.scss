@@ -1,0 +1,48 @@
+@import '../../mixin';
+@import '../../vari';
+
+.foodSuggestions-container {
+    @include flexbox-center-between;
+
+}
+
+.foodSuggestions {
+    >div {
+        width: $pageSize;
+        overflow: hidden;
+
+        // height: 748px;
+        @include tablet() {
+            width: 90%;
+        }
+    }
+
+
+    h1 {
+        @include styleTitleH1();
+        color: $whiteText;
+    }
+
+    .listProduct {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .showMore {
+        margin: 60px 0 0;
+        padding: 20px 36px;
+
+        &:hover {
+            background-color: $orangeColor;
+        }
+    }
+
+    button {
+        background-color: $greenCokor;
+        transition: all linear .8s;
+
+    }
+
+
+}

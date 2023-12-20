@@ -1,0 +1,71 @@
+@import '../vari';
+
+.food {
+    display: flex;
+    position: relative;
+    font-family: $robotoFont;
+    color: $blackText;
+    width: 280px;
+    background-color: $bgColor;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    & h3 {
+        font-size: $text-16;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+
+    & h4 {
+        font-weight: 500;
+        font-size: 14px;
+        color: gray;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    & button {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        background-color: orangered;
+        padding: 5px 12px;
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 25px;
+    }
+
+    &-image {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 180px;
+        height: 100px;
+
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+           // box-shadow: 0px 5px 20px rgba(36, 39, 37, 0.5);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+    }
+
+    &-detail {
+        padding: 20px;
+    }
+
+    &-detail-price {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        gap: 5px;
+    }
+}

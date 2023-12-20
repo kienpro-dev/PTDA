@@ -1,0 +1,26 @@
+.admin-dashboard {
+    padding: 30px;
+    .chart {
+        width: 100px;
+        height: 50px;
+    }
+}
+.dashboard-main-charts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    .dashboard-barchart, .dashboard-piechart, .dashboard-areachart{
+        height: 50vh;
+        // width: 28%;
+        .admin-barChartBox {
+            // height: 100%;
+            
+        }
+    }
+    .dashboard-areachart{
+        // width: 35%;
+    }
+}

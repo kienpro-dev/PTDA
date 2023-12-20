@@ -1,0 +1,60 @@
+@import '../../mixin';
+@import '../../vari';
+@import '../homeUser/Banner';
+@import '../homeUser/Category';
+@import '../homeUser/FoodSuggestions';
+@import '../homeUser/Services';
+@import '../homeUser/Advertisement';
+@import '../homeUser/PopularDishes';
+
+
+.home {
+    background-color: #fff;
+    color: $blackText;
+    font-family: $robotoFont;
+    overflow: hidden;
+}
+
+.home-container {
+    @include flexbox-center-between;
+}
+
+.bgColorImage {
+    transition: background .3s, border-radius .3s, opacity .3s;
+    padding: $pad60-0;
+    background-image: url('/src/assets/images/bg_3.png');
+    background-color: rgba(240, 128, 128, 0.04);
+    background-position: top left;
+    background-size: 30%;
+    padding-bottom: 80px;
+
+    h1 {
+        margin: 20px 0;
+    }
+
+
+    @include mobile() {
+        .slick-list {
+            margin: 0 0 0 20%;
+        }
+
+        h1 {
+            margin: 0 !important;
+        }
+    }
+
+    @include tablet() {
+        .slick-list {
+            margin: 0 auto;
+        }
+    }
+}
+
+.bgColorWhite {
+    @include bgColor($whiteText);
+    padding: 0;
+
+    button {
+        background-color: $yellowColorLight;
+    }
+}

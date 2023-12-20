@@ -1,0 +1,36 @@
+.admin-dataTable {
+    margin-left: 30px;
+    h1 {
+        font-family: 'Roboto';
+        color: rgb(56, 55, 55);
+        font-size: 24px;
+    }
+    button {
+        margin-bottom: 20px;
+    }
+    .dataGrid{
+        padding: 10px;
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .action {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+            .view {
+                a{
+                    color: green;
+                    
+                }
+                
+            }
+            .delete{
+                color: red;
+                cursor: pointer;
+            }
+        }
+    }
+}

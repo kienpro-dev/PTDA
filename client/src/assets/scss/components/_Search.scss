@@ -1,0 +1,131 @@
+@import '../mixin';
+@import '../vari';
+
+.search-container {
+    @include flexbox-center-between();
+}
+
+.search {
+    >div {
+        width: $pageSize;
+
+        h1 {
+            font-family: $appleFont;
+            text-align: left;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        button {
+            // display: none;
+        }
+
+        padding-top:0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.order-history-paging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 60px;
+
+    button {
+        display: block !important;
+    }
+
+}
+
+.btn-history-paging {
+    background-color: white;
+    color: $blackText;
+    font-size: 14px;
+    transition: all ease 0.6s;
+    margin-top: 40px;
+
+
+    .fa-angles-left,
+    .fa-angles-right {
+        font-size: 14px;
+    }
+
+    &:hover {
+        background-color: $orangeColor;
+        color: white;
+
+        .fa-angles-left,
+        .fa-angles-right {
+            color: white;
+        }
+    }
+}
+
+.btn-history-paging.active {
+    background-color: $orangeColor;
+    color: white;
+}
+
+@include mobile() {
+    .search {
+        >div {
+            width: 360px;
+            margin: 0 auto;
+
+            .card {
+                margin: 12px auto 24px;
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .search {
+        >div {
+            width: 90%;
+            margin: 0 auto;
+
+            .card {
+                margin: 12px auto 24px;
+            }
+
+            h1 {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+
+}
+.input-search-product{
+    width: 300px;
+}
+.list-products-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px !important;
+}
+
+.search-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    input {
+        padding: 10px;
+        border: 1px solid gray;
+        width: 500px;
+        height: 40px;
+        outline: none;
+    }
+}
+.button-search-product {
+    border-radius: 0 4px 4px 0 !important;
+    height: 40px;
+    padding-top: 5px !important;
+}
+.form-search-products {
+    display: flex;
+}

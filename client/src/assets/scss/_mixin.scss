@@ -1,0 +1,46 @@
+@import './vari';
+
+@mixin mobile {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 1024px) and (min-width:601px) {
+        @content;
+    }
+}
+
+@mixin flexbox-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin size($width, $height) {
+    width: $width ;
+    height: $height;
+}
+
+@mixin absBox($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin styleTitleH1() {
+    font-size: $gilroyFont;
+    color: #1e1d23;
+    font-size: 42px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@mixin bgColor($color) {
+    background-color: $color;
+    padding: $pad60-0;
+}

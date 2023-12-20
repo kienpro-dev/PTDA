@@ -1,0 +1,135 @@
+@import '../_mixin.scss';
+@import '../vari';
+
+.footer {
+    background-color: $orangeColor;
+    display: flex;
+    justify-content: center;
+
+    >div {
+        width: $pageSize;
+        color: $whiteText;
+        font-family: $appleFont;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0 40px;
+        align-items: starts;
+        flex-wrap: wrap;
+
+        @include mobile() {
+            gap: 20px;
+
+            >div:nth-child(1) {
+                width: 80% !important;
+                margin: 0 auto;
+            }
+
+            >div:nth-child(2),
+            >div:nth-child(3) {
+                width: 30%;
+                margin: 0 auto;
+            }
+
+            >div:nth-child(4) {
+                width: 40% !important;
+                margin: 0 auto;
+            }
+        }
+
+        @include tablet() {
+            flex-wrap: wrap !important;
+            justify-content: space-around;
+            width: 90%;
+        }
+    }
+
+
+
+
+
+
+    &-infor {
+        img {
+            // width: 20%;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-list {
+        @include tablet() {
+            width: 40%;
+        }
+
+        & span {
+            font-weight: 700;
+        }
+
+        &-food {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+
+
+    &-shipping {
+
+        @include tablet() {
+            margin-top: 20px;
+            width: 36%;
+            margin-left: 8px;
+        }
+
+        & span {
+            font-weight: 700;
+            color: #fff;
+
+        }
+
+        &-name {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+
+    &-payment {
+        @include tablet() {
+            width: 41%;
+            // text-align: center;?
+        }
+
+        & span {
+            font-weight: 700;
+        }
+
+        &-detail {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            >img:nth-child(4) {
+                width: 40px;
+                height: 35px;
+            }
+
+            @include tablet() {
+                justify-content: start;
+
+            }
+        }
+
+
+        & img {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+
+    }
+
+    li {
+        color: #fff;
+    }
+}

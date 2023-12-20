@@ -1,0 +1,228 @@
+@import '../mixin';
+@import '../vari';
+
+.cart-container {
+    @include flexbox-center-between;
+}
+
+.cart {
+    >div {
+        width: $pageSize;
+        overflow: hidden;
+
+        h1 {
+            @include styleTitleH1();
+            font-family: $appleFont;
+            font-size: 35px;
+            text-align: left;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+}
+
+.cart-table {
+    width: $pageSize;
+    height: 400px;
+    overflow: scroll;
+    padding-bottom: 40px;
+
+    table {
+        width: 100%;
+        text-align: center;
+        border: 1px solid #f1f1f1;
+
+        th,
+        td {
+            white-space: nowrap;
+            font-size: $text-16;
+            font-family: $appleFont;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        img {
+            width: 60px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        th {
+            border-bottom: 2px solid $orangeColor;
+            // position: sticky;
+            // top: 0;
+            // background-color: $whiteText;
+            font-weight: 500;
+        }
+
+
+        input {
+            width: 40px;
+            padding: 8px;
+            text-align: center;
+            font-size: 16px;
+            border: none;
+        }
+
+        .cart-product-name {
+            color: $greenCokor;
+            font-size: $text-16;
+        }
+
+        button {
+            // background-color: $whiteText;
+            background-color: white;
+            color: black;
+            
+
+            &:hover {
+                background-color: orangered;
+                transition: all 0.2s;
+                color: white;
+                border-radius: 50%;
+                i {
+                    color: $whiteText;
+                }
+            }
+
+            i {
+                transition: all ease .25s;
+                font-size: 14px;
+                color: black;
+            }
+        }
+
+        .cart-product-price {
+            color: red;
+        }
+
+
+    }
+
+    hr {
+        margin-top: 60px;
+
+    }
+
+
+}
+
+.cart-table::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+}
+
+.cart-table::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.cart-table::-webkit-scrollbar-thumb {
+    background-color: $greenCokor;
+}
+
+.cart-pay {
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+    // padding: 30px 0;
+    right: 0;
+    left: 0;
+    height: 160px;
+
+    hr {
+        width: 1200px;
+        border: 1px solid #f2f2f2;
+
+    }
+
+    p {
+        // width: 1080px;
+        text-align: right;
+        display: block;
+        margin: 24px auto;
+        font-size: $text-21;
+        font-family: $appleFont;
+
+    }
+
+    span {
+        margin-left: 40px;
+        color: red;
+        font-size: $text-24;
+        font-weight: 600;
+        font-family: $appleFont;
+    }
+
+    >div {
+        width: 1150px;
+        margin: 0 auto;
+
+        >div {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+    }
+}
+
+@include mobile() {
+    h1 {
+        text-align: center !important;
+    }
+
+    .cart-table {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .cart-pay {
+        height: 120px;
+
+        hr {
+            width: 79%;
+        }
+
+        div {
+            width: 80%;
+            margin: 0 auto;
+
+            >div {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@include tablet() {
+    h1 {
+        text-align: center !important;
+    }
+
+    .cart-table {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .cart-pay {
+        height: 120px;
+
+        hr {
+            width: 80%;
+        }
+
+        div {
+            width: 80%;
+            margin: 0 auto;
+
+            >div {
+                justify-content: end;
+            }
+        }
+    }
+}
+
+.cart-items-quantity {
+    display: flex;
+    justify-content: center;
+}
